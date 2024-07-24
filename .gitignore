@@ -284,6 +284,8 @@ FakesAssemblies/
 # Node.js Tools for Visual Studio
 .ntvs_analysis.dat
 node_modules/
+npm-debug.log
+yarn-error.log
 
 # Visual Studio 6 build log
 *.plg
@@ -396,3 +398,22 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# Compiled output
+/dist
+/tmp
+/out-tsc
+/bazel-out
+
+# Miscellaneous
+/.angular/cache
+.sass-cache/
+/connect.lock
+/coverage
+/libpeerconnection.log
+testem.log
+/typings
+
+# System files
+.DS_Store
+Thumbs.db
