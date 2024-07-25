@@ -2,13 +2,13 @@
 {
     public record CalculoCDBResponse
     {
-        public double ValorBruto { get; private set; }
-        public double ValorLiquido { get; private set; }
+        public decimal ValorBruto { get; private set; }
+        public decimal ValorLiquido { get; private set; }
 
         public CalculoCDBResponse(double valorBruto, double valorLiquido)
         {
-            ValorBruto = valorBruto;
-            ValorLiquido = valorLiquido;
+            ValorBruto = decimal.Parse(valorBruto.ToString("f2"));
+            ValorLiquido = decimal.Parse(valorLiquido.ToString("f2"));
         }
     }
 }

@@ -1,5 +1,7 @@
 using CalculoCDBWebApi.Models;
 using CalculoCDBWebApi.Service;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CalculoCDBSolution.Controllers
@@ -19,7 +21,7 @@ namespace CalculoCDBSolution.Controllers
         }
 
         [HttpGet]
-        public CalculoCDBResponse Get
+        public async Task<CalculoCDBResponse> GetAsync
         (
             [FromQuery] double valor,
             [FromQuery] int qtdMeses
@@ -28,7 +30,7 @@ namespace CalculoCDBSolution.Controllers
             var valorBruto = _calculoCDBService.CalcularValorBruto(valor, qtdMeses);
             var valorLiquido = _calculoCDBService.CalcularValorLiquido(valorBruto, qtdMeses);
             var calculoCDBResponse = new CalculoCDBResponse(valorBruto, valorLiquido);
-            return calculoCDBResponse;
+            return await Task.FromResult(calculoCDBResponse);
         }
     }
 }
