@@ -1,0 +1,6 @@
+@CalculoCDBWebApi_HostAddress = http://localhost:5238
+
+GET {{CalculoCDBWebApi_HostAddress}}/calculo-cdb/
+Accept: application/json
+
+###
