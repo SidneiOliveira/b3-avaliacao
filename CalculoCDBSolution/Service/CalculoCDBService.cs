@@ -12,10 +12,11 @@
         private static readonly double ATE_VINTE_E_QUATRO_MESES = 0.175;
         private static readonly double ACIMA_DE_VINTE_E_QUATRO_MESES = 0.15;
 
-        public readonly KeyValuePair<int, double> ATE_SEIS_MESES_KEY = new KeyValuePair<int, double>(6, ATE_SEIS_MESES);
-        public readonly KeyValuePair<int, double> ATE_DOZE_MESES_KEY = new KeyValuePair<int, double>(12, ATE_DOZE_MESES);
-        public readonly KeyValuePair<int, double> ATE_VINTE_E_QUATRO_MESES_KEY = new KeyValuePair<int, double>(24, ATE_VINTE_E_QUATRO_MESES);
-        public readonly KeyValuePair<int, double> ACIMA_DE_VINTE_E_QUATRO_MESES_KEY = new KeyValuePair<int, double>(25, ACIMA_DE_VINTE_E_QUATRO_MESES);
+        public readonly KeyValuePair<int, double> ATE_SEIS_MESES_KEY = new (6, ATE_SEIS_MESES);
+        public readonly KeyValuePair<int, double> ATE_DOZE_MESES_KEY = new (12, ATE_DOZE_MESES);
+        public readonly KeyValuePair<int, double> ATE_VINTE_E_QUATRO_MESES_KEY = new (24, ATE_VINTE_E_QUATRO_MESES);
+        public readonly KeyValuePair<int, double> ACIMA_DE_VINTE_E_QUATRO_MESES_KEY = new (25, ACIMA_DE_VINTE_E_QUATRO_MESES);
+
         public double CalcularValorBruto(double valorInicial, int qtdMeses)
         {
             var taxaMaisPagamentoSobreCDI = VALOR_FIXO_CALCULO_TAXA_SOBRE_CDI + (TB * CDI);
